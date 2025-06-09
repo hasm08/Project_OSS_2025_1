@@ -1,19 +1,15 @@
 import tkinter as tk
 
-
 class Calculator:
     def __init__(self, root):
         self.root = root
         self.root.title("계산기")
         self.root.geometry("300x400")
-
         self.expression = ""
 
-        # 입력창
         self.entry = tk.Entry(root, font=("Arial", 24), justify="right")
         self.entry.pack(fill="both", ipadx=8, ipady=15, padx=10, pady=10)
 
-        # 버튼 생성
         buttons = [
             ['7', '8', '9', '/'],
             ['4', '5', '6', '*'],
@@ -47,6 +43,3 @@ class Calculator:
 
         self.entry.delete(0, tk.END)
         self.entry.insert(tk.END, self.expression)
-
-
-
